@@ -1,9 +1,23 @@
-/* 
-[projekto pavadinimas] [aplinkos pavadinimas] [default kalba]
+const config = require('./config.js');
+const server = require('./lib/server.js');
 
-Jeigu kodas pasileidzia is programuotojo PC, tai:
-Server dev en
+const app = {};
 
-Jeigu kodas pasileidzia is programuotojo PC, tai:
-Serveris production lt
-*/ 
+app.init = () => {
+    // pasiruosti pradinius folder'ius
+
+    // pasiruosti pradinius failus
+
+    // prisijungimas prie DB (duomenu baze)
+
+    // uzkurti pati serveri (musu programa)
+    server.init();
+
+    // reguliariu procesu paleidimas:
+    // - istrinti senus/nebreikalingus failus
+    // - atsinaujinti informacija per/is API (valiutu kursai)
+}
+
+app.init();
+
+module.exports = app;
