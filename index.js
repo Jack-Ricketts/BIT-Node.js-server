@@ -1,4 +1,4 @@
-const config = require('./config.js');
+
 const server = require('./lib/server.js');
 
 const app = {};
