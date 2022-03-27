@@ -3,6 +3,9 @@ class IsValid {
         const minUsernameLength = 4;
         const maxUsernameLength = 20;
 
+        if (typeof text !== 'string') {
+            return 'Netinkamo tipo reiksme';
+        }
         text = text.trim();
 
         if (text === '') {
@@ -24,21 +27,53 @@ class IsValid {
     }
 
     static email(text) {
-        const minEmailLength = 4;
-
-        text = text.trim();
-
+        if (typeof text !== 'string') {
+            return 'Netinkamo tipo reiksme';
+        }
         return true;
     }
 
     static password(text) {
         const minPasswordLength = 12;
+        if (typeof text !== 'string') {
+            return 'Netinkamo tipo reiksme';
+        }
 
         if (text === '') {
             return 'Pamirsai irasyti slaptazodi';
         }
         if (text.length < minPasswordLength) {
             return 'Per trumpas slaptazodis';
+        }
+        return true;
+    }
+
+    static title(text) {
+        if (typeof text !== 'string') {
+            return 'Netinkamo tipo reiksme';
+        }
+        if (text === '') {
+            return 'Pavadinimas negali buti tuscias';
+        }
+        return true;
+    }
+
+    static slug(text) {
+        if (typeof text !== 'string') {
+            return 'Netinkamo tipo reiksme';
+        }
+        if (text === '') {
+            return 'URL negali buti tuscias';
+        }
+        return true;
+    }
+
+    static content(text) {
+        if (typeof text !== 'string') {
+            return 'Netinkamo tipo reiksme';
+        }
+        if (text === '') {
+            return 'Turinys negali buti tuscias';
         }
         return true;
     }

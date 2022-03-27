@@ -1,11 +1,16 @@
-const contactsSection = require("../components/contactsSection.js");
-const heroSection = require("../components/heroSection.js");
-const servicesSection = require("../components/servicesSection.js");
-const PageTemplate = require("../lib/Page.js");
+import { contactsSection } from "../components/contactsSection.js";
+import { heroSection } from "../components/heroSection.js";
+import { servicesSection } from "../components/servicesSection.js";
+import { PageTemplate } from "../lib/Page.js";
 
 class PageHome extends PageTemplate {
-    constructor() {
-        super();
+    /**
+     * Sabloninio puslapio konstruktorius.
+     * @constructor
+     * @param {object} data Duomenu objektas
+     */
+    constructor(data) {
+        super(data);
         this.isHomePage = true;
     }
 
@@ -14,4 +19,4 @@ class PageHome extends PageTemplate {
     }
 }
 
-module.exports = PageHome;
+export { PageHome };

@@ -1,10 +1,9 @@
-
-const server = require('./lib/server.js');
+import { server } from './lib/server.js';
 
 const app = {};
 
 app.init = () => {
-    // pasiruosti pradinius folder'ius
+    // pasiruosti pradinius folder'ius:
 
     // pasiruosti pradinius failus
 
@@ -14,10 +13,10 @@ app.init = () => {
     server.init();
 
     // reguliariu procesu paleidimas:
-    // - istrinti senus/nebreikalingus failus
+    // - istrinti senus/nebereikalingus failus
     // - atsinaujinti informacija per/is API (valiutu kursai)
 }
 
 app.init();
 
-module.exports = app;
+export { app };
